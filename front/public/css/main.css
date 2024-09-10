@@ -1,0 +1,454 @@
+/**********************************************************
+ *
+ *  front/public/css/main.css
+ *
+ */
+
+    *,
+    body
+    {
+        margin: 0;
+        padding: 0;
+    }
+
+    body {
+        background: #DCDCDC;
+    }
+
+
+/**********************************************************
+ *
+ *  Headers.
+ *
+ */
+    h2 {
+        position: relative;
+        float: left;
+
+        font-size: 28px;
+
+        margin: 2.5vh 0 0 2.5vh;
+
+        color: #DF6C00;
+        text-shadow: 1px 1px 1px #000;
+    }
+
+
+/**********************************************************
+ *
+ *  Links
+ *
+ */
+    a {
+        font-size: 20px;
+
+        color: #FF8C00;
+        text-decoration: none;
+    }
+
+    a:hover {
+        color: #FFAC20;
+        font-weight: bold;
+    }
+
+
+/**********************************************************
+ *
+ *  Forms.
+ *
+ */
+    form h1 {
+        position: relative;
+        float: left;
+
+        margin: 0 0 2.5vh 0;
+        padding: 0;
+
+        width: 100%;
+        height: auto;
+
+        font-size: 28px;
+        
+        color: #1E90FF;
+    }
+
+    form input {
+        position: relative;
+        float: left;
+
+        box-sizing: border-box;
+
+        margin: 0 0 1.5vh 0;
+        padding: 0;
+
+        font-size: 20px;
+        font-weight: bold;
+
+        width: 100%;
+        height: 5vh;
+
+        text-align: center;
+
+        border: 2px solid #FF8C00;
+    }
+
+    form textarea {
+        font-size: 20px;
+        font-weight: bold;
+
+        border: 2px solid #FF8C00;
+    }
+
+    form select {
+        width: 100%;
+        height: 5vh;
+
+        margin: 0 0 3vh 0;
+
+        border: 2px solid #FF8C00;
+
+        font-size: 20px;
+        font-weight: bold;
+
+        color: #888;
+        background: #FFF;
+    }
+
+    form input[type=submit] {
+        color: #FFF;
+        background: #FF8C00;
+
+        margin: 2.5vh 0 0 0;
+    }
+
+    form label {
+        position: relative;
+        float: left;
+
+        box-sizing: border-box;
+
+        margin: 1.5vh 0 .5vh 0;
+
+        width: 100%;
+        height: auto;
+
+        color: #DF6C00;
+        text-shadow: 1px 1px 1px #000;
+
+        font-size: 24px;
+    }
+
+
+/**********************************************************
+ *
+ *  Buttons.
+ *
+ */
+    .buttons {
+        position: relative;
+        float: right;
+
+        box-sizing: border-box;
+
+        margin: 1.5vh 2.5vh;
+
+        width: auto;
+        height: auto;
+    }
+
+        .buttons a {
+            position: relative;
+            float: right;
+
+            box-sizing: border-box;
+
+            margin: 0 0 0 1.5vw;
+            padding: 0 1.5vh;
+
+            line-height: 6.5vh;
+
+            width: auto;
+            height: 6vh;
+
+            font-size: 20px;
+
+            color: #FFF;
+            background: #FF8C00;
+
+            text-decoration: none;
+        }
+
+        .buttons a:hover {
+            font-weight: normal;
+            text-decoration: underline;
+        }
+
+
+/**********************************************************
+ *
+ *  Project manager.
+ *
+ */
+    .project-manager {
+        position: relative;
+        float: left;
+
+        box-sizing: border-box;
+
+        margin: 2.5vh;
+        padding: 0;
+
+        width: calc(100vw - 5vh);
+        height: 65vh;
+
+        background: #FFF;
+
+        overflow-x: hidden;
+        overflow-y: auto;
+
+        z-index: 10;
+    }
+
+
+/**********************************************************
+ *
+ *  Messages
+ *
+ */
+    .messages {
+        position: relative;
+        float: left;
+
+        box-sizing: border-box;
+
+        margin-bottom: 1vh;
+
+        width: 100%;
+        height: auto;
+    }
+
+
+/**********************************************************
+ *
+ *  Tagging.
+ *
+ */
+    .tags {
+        position: relative;
+        float: left;
+
+        width: 100%;
+        height: 6vh;
+    }
+
+        .tag {
+            position: relative;
+            float: left;
+
+            margin: 0 1.5vh 1vh 0;
+
+            width: auto;
+            height: 5vh;
+
+            font-family: Helvetica, sans-serif;
+            font-size: 16px;
+            font-weight: bold;
+
+            line-height: 5.5vh;
+        }
+
+            .tag-text {
+                position: relative;
+                float: left;
+                
+                box-sizing: border-box;
+
+                margin: 0;
+                padding: 0 0 0 .5vw;
+
+                height: 5vh;
+
+                color: #FFF;
+                background: #0A0;
+
+                border-radius: 4px 0px 0px 4px;
+            }
+
+            .tag-remove {
+                position: relative;
+                float: left;
+                
+                box-sizing: border-box;
+
+                height: 5vh;
+                width: 5vh;
+
+                text-align: center;
+
+                color: #FFF;
+                background: #0A0;
+
+                cursor: pointer;
+
+                border-radius: 0px 4px 4px 0px;
+            }
+
+
+/**********************************************************
+ *
+ *  Overlay.
+ *
+ */
+    #overlay {
+        position: fixed;
+        display: none;
+
+        top: 0%;
+        left: 0%;
+        width: 100vw;
+        height: 100vh;
+
+        opacity: 0.75;
+
+        background: #888;
+
+        z-index: 2000;
+    }
+
+
+/**********************************************************
+ *
+ *  Confirm modal pop-up.
+ *
+ */
+    #confirm-modal {
+        position: fixed;
+        display: none;
+
+        top: 30%;
+        left: 5%;
+        width: 90%;
+        height: auto;
+
+        background: #FFF;
+
+        border-radius: 8px;
+
+        z-index: 2001;
+    }
+
+        #confirm-action {
+            position: fixed;
+            display: none;
+        }
+
+        #confirm-header {
+            position: relative;
+            float: left;
+            
+            box-sizing: border-box;
+
+            padding: 0 0 0 1.5vh;
+
+            width: 100%;
+            height: 5vh;
+
+            line-height: 5.5vh;
+
+            border-radius: 8px 8px 0px 0px;
+            cursor: pointer;
+
+            font-size: 18px;
+            font-weight: bold;
+            font-family: Helvetica, sans-serif;
+
+            background: #DCDCDC;
+        }
+
+            #confirm-title {
+                position: relative;
+                float: left;
+
+                box-sizing: border-box;
+
+                width: calc(100% - 5vh);
+                height: 5vh;
+
+                color: #FF8C00;
+                text-shadow: 1px 1px 1px #000;
+            }
+
+            #confirm-close {
+                position: relative;
+                float: right;
+
+                margin: 1vh;
+                box-sizing: border-box;
+                text-align: center;
+
+                width: 3vh;
+                height: 3vh;
+
+                line-height: 4vh;
+
+                font-size: 16px;
+                font-weight: bold;
+
+                color: #FFF;
+                background: #A00;
+
+                border-radius: 2px;
+            }
+
+
+        #confirm-question {
+            position: relative;
+            float: left;
+            
+            margin: 2.5vh 2.5vh 2.5vh 4vh;
+            padding: 4vh 2.5vh 5vh 2.5vh;
+
+            box-sizing: border-box;
+
+            width: calc(100% - 8vh);
+            height: auto;
+
+            text-align: center;
+
+            font-size: 16px;
+            font-family: Helvetica, sans-serif;
+
+            color: #888;
+        }
+
+        .confirm-option {
+            position: relative;
+            float: right;
+
+            margin: 0vh 2.5vh 2.5vh 0;
+            padding: 0 2.5vh;
+
+            width: auto;
+            height: 5vh;
+
+            font-size: 18px;
+            font-weight: bold;
+            font-family: Helvetica, sans-serif;
+
+            line-height: 5.5vh;
+
+            border-radius: 4px;
+
+            color: #FFF;
+            background: #FF8C00;
+
+            cursor: pointer;
+        }
+
+    @media only screen and (min-width: 640px) {
+        #confirm-modal {
+            left: 25vw;
+            width: 50vw;
+        }
+    }
+

@@ -1,0 +1,20 @@
+Options +FollowSymLinks
+RewriteEngine On
+
+# Stop processing if already in the /public directory
+RewriteRule ^front/public/ - [L]
+
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+
+# Locations of some public assers.
+RewriteRule js/(.*) front/public/js/$1 [QSA,L]
+RewriteRule css/(.*) front/public/css/$1 [QSA,L]
+RewriteRule img/(.*) front/public/img/$1 [QSA,L]
+RewriteRule store/(.*) store/$1 [QSA,L]
+
+# Static assets
+RewriteCond %{DOCUMENT_ROOT}/front/public/$1 -f
+RewriteRule (.+) front/public/$1 [L]
+
+RewriteRule ^(.*)$ front/public/index.php?url=$1 [L,QSA]
