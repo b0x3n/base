@@ -26,8 +26,6 @@
  *  There's a few other methods but these are the most
  *  useful.
  * 
- *  M. Nealon, 2019.
- * 
  */
 
 
